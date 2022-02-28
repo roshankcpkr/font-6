@@ -1,0 +1,150 @@
+:root{
+    --magenta: hsl(300, 43%, 22%);
+    --pink: hsl(333, 80%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --light-magenta: hsl(300, 24%, 96%);
+    --dark-magenta: hsl(303, 10%, 53%);
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+    width: 375px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background: url(images/bg-pattern-top-mobile.svg) no-repeat;
+}
+h1{
+    text-align: center;
+    color: var(--magenta);
+    font-weight: 700;
+}
+.sub-desc{
+    color: var(--dark-magenta);
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 500;
+}
+.ratings{
+    margin-top: 1em;
+    margin-bottom: 2.5em;
+}
+.ratings li{
+    padding: 0.2em;
+    background-color: var(--light-magenta);
+    color: var(--magenta);
+    margin: 1em;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 0.6em;
+}
+.ratings li span{
+    display: block;
+    margin-bottom: 0.4em;
+}
+.person-review li{
+    background-color: var(--magenta);
+    padding: 2.5em;
+   margin: 1em;
+    border-radius: 0.5em;
+}
+.profile-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.6em;
+}
+.person-review li h2{
+    color: var(--white);
+    font-size: 1em;
+    margin: 0;
+    line-height: 1.6;
+}
+.person-review li span{
+    color: var(--pink);
+    display: block;
+    letter-spacing: 0.7px;
+}
+.review-para{
+    color: var(--white);
+    line-height: 1.6;
+    margin: 0;
+}
+.profile-img{
+    border-radius: 50%;
+    width: 23%;
+}
+.titles{
+    width: 70%;
+}
+.attribution{
+    margin-top: 4em;
+}
+@media (min-width: 900px) {
+    body{
+        width: 100%;
+        background: url(images/bg-pattern-bottom-desktop.svg), url(images/bg-pattern-top-desktop.svg);
+        background-repeat: no-repeat no-repeat;
+        background-position: bottom -100px right -100px, top left;
+    }
+    .title-section{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .title-desc{
+        width: 40%;
+        
+    }
+    h1, .sub-desc, span{
+        text-align: left;
+    }
+    h1{
+        width: 80%;
+        font-size: 2.5em;
+    }
+    .ratings{
+        width: 40%;
+
+    }
+    .ratings li span{
+        display: inline;
+        margin-right: 2em;
+    }
+    .person-review li{
+        width: 27%;
+    }
+    .person-review li:nth-child(2){
+        transform: translateY(1em);
+    }
+    .person-review li:nth-child(3){
+        transform: translateY(2em);
+    }
+    .person-review{
+     width: 80%;
+      display: flex;
+      margin: 3em auto;
+      justify-content: space-between;
+    }
+    .ratings li:nth-child(2){
+        transform: translate(-3em);
+    }
+    .ratings li:nth-child(1){
+        transform: translate(-6em);
+    }
+    .person-review li{
+        margin: 0 1em 0 0;
+    }
+
+}
